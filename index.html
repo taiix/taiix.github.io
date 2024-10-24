@@ -11,12 +11,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#under-construction {
+				background-color: #ffcc00;
+				padding: 40px 20px; /* Added padding to the top and bottom */
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+			}
+			#under-construction p {
+				margin-top: 20px; /* Additional margin for space between the heading and the paragraph */
+				padding: 10px 0; /* Padding specifically for the paragraph */
+			}
+			#under-construction::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, black 10px, black 20px); /* Diagonal black lines */
+				opacity: 0.1; /* Make the lines subtle */
+				pointer-events: none;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+				<section id="under-construction" style="background-color: #ffd900a4; padding: 20px; text-align: center;">
+					<h2>Portfolio Under Construction</h2>
+					<p>Thank you for visiting! This portfolio is currently being updated.</p>
+				</section>
 				<!-- Header -->
 					<header id="header" class="alt">
 						<a href="index.html" class="logo"><strong>Home</strong></a>
