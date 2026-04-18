@@ -1,0 +1,17 @@
+.frosted-container-info {
+  position: relative;
+  width: min(420px, 92vw);
+  margin: 0;
+  padding: clamp(12px, 2vw, 20px);
+
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 3px solid rgba(255, 244, 244, 0.2);
+}
+
+@media (max-width: 768px) {
+  .frosted-container-info {
+    width: min(560px, 94vw);
+  }
+}

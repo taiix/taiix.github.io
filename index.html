@@ -1,173 +1,289 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Stanislav's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stan's Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/projects.css">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="top-nav">
+      <div class="top-nav-brand">
+        <h1>Stanislav</h1>
+        <p>Game Developer</p>
+      </div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Home</strong></a>
-					</header>
+      <nav class="top-nav-links" aria-label="Main navigation">
+        <button class="nav-panel-btn" type="button" data-panel-type="projects-browser">Projects</button>
+        <button class="nav-panel-btn" type="button" data-panel-title="Contact" data-panel-text="" data-panel-html="
+        &lt;span class='modal-contact-desc'&gt;I am open to collaborations, freelance opportunities, and game development roles.&lt;/span&gt;
+        &lt;span class='modal-contact-link'&gt;
+          &lt;svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'&gt;
+            &lt;path fill='currentColor' d='M12 1.5C6.2 1.5 1.5 6.3 1.5 12.2c0 4.7 3 8.7 7.2 10.1.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.8 9.8 0 0 1 5.1 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.8 1 1.7 1 2.7 0 4-2.4 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5 4.2-1.4 7.2-5.4 7.2-10.1C22.5 6.3 17.8 1.5 12 1.5z'/&gt;
+          &lt;/svg&gt;
+          &lt;a href='https://github.com/taiix' target='_blank' rel='noopener noreferrer'&gt;github.com/taiix&lt;/a&gt;
+        &lt;/span&gt;
+        &lt;span class='modal-contact-link'&gt;
+          &lt;span aria-hidden='true'&gt;@&lt;/span&gt;
+          &lt;a href='mailto:contact@stanmakes.games'&gt;contact@stanmakes.games&lt;/a&gt;
+        &lt;/span&gt;">Contact</button>
+      </nav>
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Stanislav</h1>
-							</header>
-							<div class="content">
-								<p></p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+      <div class="top-nav-icons" aria-label="Social links">
+        <a href="https://github.com/taiix" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 1.5C6.2 1.5 1.5 6.3 1.5 12.2c0 4.7 3 8.7 7.2 10.1.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.8 9.8 0 0 1 5.1 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.8 1 1.7 1 2.7 0 4-2.4 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5 4.2-1.4 7.2-5.4 7.2-10.1C22.5 6.3 17.8 1.5 12 1.5z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
 
-				<!-- Main -->
-					<div id="main">
+    <main id="siteMainContent">
+      <!-- Hero -->
+      <div class="background"></div>
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/astar.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="Astar.html" class="link">A* Searching Algorithm</a></h3>
-										<p>A* Algorithm in Unity</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/theDarkCastle.png" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="theDarkCastle.html" class="link">The Dark Castle</a></h3>
-										<p>The Dark Castle is a game that takes place in a castle. In this game you have to escape the castle while you are collecting coins. <br>
-										You are controlling two characters. The one is scared from the dark, and the other one cannot stay on light for too long.
-										</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="unrealShooter.html" class="link">Shooter in UE5</a></h3>
-										<p>Shooter game prototype</p>
-									</header>
-								</article>
-							
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="unityShaders.html" class="link">Unity Shaders</a></h3>
-										<p>Shaders in Unity using Shader Graph</p>
-									</header>
-								</article>
+      <section class="content hero-panel">
+        <img src="assets/ChatGPT Image Apr 17, 2026, 11_37_54 PM.png" alt="Stanislav avatar" class="hero-avatar">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Hi, I'm Stanislav</p>
+          <h1>Game Developer</h1>
+          <h2>Crafting immersive and engaging gaming experiences.</h2>
+        </div>
+      </section>
 
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="BoidsAlgorithm.html" class="link">Boids</a></h3>
-										<p>Boids Algorithm</p>
-									</header>
-								</article>
+      <!-- Dashboard -->
+      <section id="dashboardSection" class="dashboard-section">
+        <div class="dashboard-grid">
+          <article class="dashboard-card about-card">
+            <h3>About Me</h3>
+            <p>
+              I am a Unity developer with over 10 years of nonprofessional experience in C#, game
+              math, and networking. Since 2013, I have been creating games that challenge my
+              creativity, often participating in game jams to keep my skills sharp. I am known for
+              my ability to solve problems in innovative ways and for my technical knowledge. I
+              am passionate about making games that are both fun and immersive, and I enjoy
+              working with teams to bring new ideas to life and push my boundaries.
+            </p>
+          </article>
 
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="WFC.html" class="link">Wave Function Collapse</a></h3>
-										<p>Wave Function Collapse and procedural city generation</p>
-									</header>
-								</article>
-							</section>
-						
-						<!-- Two -->
+          <article class="dashboard-card projects-card">
+            <h3 id="projectsTitle">Featured Projects</h3>
+            <div class="frosted-container">
+              <div class="card">
+                <div class="card-embed-shell">
+                  <iframe
+                    class="card-embed"
+                    src="https://itch.io/embed/4026544?dark=true"
+                    title="Echoes of the Eternal on itch.io"
+                    loading="lazy"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <div class="card-text">
+                  <p class="card-title">Echoes of the Eternal</p>
+                  <p class="card-desc">You inherited a mysterious, nonfunctional pocket watch from your reclusive uncle. 
+                    While examining it, the world shimmered and dissolved, depositing you not in a different place, 
+                    but in a different when, or rather, several different whens at once. Now, trapped in a strange location where a medieval hall,
+                     a roaring jazz room, and an alchemist's lab all occupy the same space, you must solve the puzzles of this collapsed timeline to find your way home.</p>
+                      <button class="card-btn small open-panel-btn" type="button" data-panel-title="Echoes of the Eternal" 
+                      data-panel-text="" 
+                      data-panel-images="
+                      assets/EchoesOfTheEternal/EchoesOfTheEternal.png, 
+                      assets/EchoesOfTheEternal/EchoesOfTheEternal1.png,
+                      assets/EchoesOfTheEternal/EchoesOfTheEternal2.png,
+                      assets/EchoesOfTheEternal/EchoesOfTheEternal3.png,
+                      assets/EchoesOfTheEternal/EchoesOfTheEternal4.png"
+                      data-panel-videos="https://www.youtube.com/watch?v=WDuqPmWjcWM&list=RDWDuqPmWjcWM&start_radio=1">More Info</button>
+                </div>
+              </div>
 
-					</div>
+              <div class="card" data-status="In Development">
+                <img src="assets/Survival Adventure/SA1.png" alt="Survival Adventure" class="card-image">
+                <div class="card-text">
+                  <p class="card-title">Survival Adventure</p>
+                  <p class="card-desc">Survival Adventure is a procedurally generated 2D game where you explore a dynamic world filled with enemies and NPCs. You survive encounters, manage resources, and upgrade your gear while each run stays fresh through procedural generation.</p>
+                  <button class="card-btn small open-panel-btn" type="button" data-panel-title="Survival Adventure" 
+                  data-panel-text="" 
+                  data-panel-images="
+                  assets/Survival Adventure/SA1.png,
+                  assets/Survival Adventure/SA2.png,
+                  assets/Survival Adventure/SA3.png
+                  ">More Info</button>
+                </div>
+              </div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">taix97@outlook.com</a>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+              <div class="card" data-status="In Development">
+                <img src="assets/procedural.png" alt="Codename Thunderbird" class="card-image">
+                <div class="card-text">
+                  <p class="card-title">Codename Thunderbird</p>
+                  <p class="card-desc">A survival game where the player crashes on an island and repairs a plane to reach floating islands. My contribution includes shaders, procedural island generation with reusable parameters, and a flexible Save/Load system optimized with compute shaders.</p>
+                  <button class="card-btn small open-panel-btn" type="button" data-panel-title="Codename Thunderbird" 
+                  data-panel-text="" 
+                  data-panel-images="assets/boids.png">More Info</button>
+                </div>
+              </div>
 
-			</div>
+              <div class="card">
+                <img src="assets/darkCastle.png" alt="The Dark Castle" class="card-image">
+                <div class="card-text">
+                  <p class="card-title">The Dark Castle</p>
+                  <p class="card-desc">Developed a 2D adventure game set in a mysterious castle. Players control two
+                                      characters simultaneously: one who is afraid of the dark, and another who cannot stay
+                                      in the light for too long. The objective is to navigate through the castle, solving puzzles
+                                      and collecting coins, while managing the unique light-based mechanics of each
+                                      character.</p>
+                  <button class="card-btn small open-panel-btn" 
+                  type="button" data-panel-title="The Dark Castle" 
+                  data-panel-text="" 
+                  data-panel-images="
+                  assets/TheDarkCastle/theDarkCastle1.png, 
+                  assets/TheDarkCastle/theDarkCastle2.png,
+                  assets/TheDarkCastle/theDarkCastle3.png, 
+                  assets/TheDarkCastle/theDarkCastle4.png"
+                  data-panel-videos="https://www.youtube.com/watch?v=E-kgTU_ApYs">More Info</button>
+                </div>
+              </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+              <div class="card">
+                <img src="assets/SnowShader/shaders.png" alt="Snow Shader" class="card-image">
+                <div class="card-text">
+                  <p class="card-title">Snow Shader</p>
+                  <p class="card-desc">Created a realistic snow shader in Unity using the Unity Shader Graph. The shader
+                                        simulates snow accumulation on various surfaces, accounting for factors like surface
+                                        orientation and environmental conditions to enhance visual realism in the game
+                                        environment.
+                                        </p>
+                  <button class="card-btn small open-panel-btn" 
+                  type="button" data-panel-title="Snow Shader" 
+                  data-panel-text="" 
+                  data-panel-images="
+                  assets/SnowShader/shaders.png,
+                  assets/SnowShader/shaders2.png
+                  ">More Info</button>
+                </div>
+              </div>
 
-	</body>
+              <div class="card">
+                <div class="card-embed-shell">
+                  <iframe
+                    class="card-embed"
+                    frameborder="0"
+                    src="https://itch.io/embed/2197684?dark=true"
+                    title="Neon Rush on itch.io"
+                    loading="lazy"
+                    allowfullscreen>
+                    <a href="https://mnnice.itch.io/neon-rush">Neon Rush by mnnice and me</a>
+                  </iframe>
+                </div>
+                <div class="card-text">
+                  <p class="card-title">Neon Rush</p>
+                  <p class="card-desc">Neon Rush is a 2D Platformer with puzzle elements composed of 7 levels. You can
+                                      traverse through the levels by running, wall-jumping, and most importantly - by using
+                                      your "Angel" after you sacrifice your character.
+                                      This is a team project.</p>
+                  <button class="card-btn small open-panel-btn" type="button" data-panel-title="Neon Rush" 
+                  data-panel-text="" 
+                  data-panel-images="">More Info</button>
+                </div>
+              </div>
+
+              <div class="card" data-status="">
+                <img src="assets/WFC/wfc.png" alt="Wave Function Collapse" class="card-image">
+                <div class="card-text">
+                  <p class="card-title">Wave Function Collapse</p>
+                  <p class="card-desc">Created a procedural city generation system in Unity using the Wave Function Collapse
+                                      algorithm. This system generates realistic city layouts with varied buildings and road
+                                      networks, ensuring a coherent and immersive urban environment.</p>
+                  <button class="card-btn small open-panel-btn" 
+                  type="button" data-panel-title="Wave Function Collapse" 
+                  data-panel-text="" 
+                  data-panel-images=
+                  "assets/WFC/wfc.png,
+                  assets/WFC/wfc1.png,"
+                  >More Info</button>
+                </div>
+              </div>
+              
+            </div>
+          </article>
+
+          <article class="dashboard-card skills-card">
+            <h3>Skills &amp; Tools</h3>
+            <div class="skills-list">
+              <span>Unity</span>
+              <span>C#</span>
+              <span>Shaders</span>
+              <span>C++</span>
+              <span>Unreal Engine</span>
+            </div>
+          </article>
+
+          <article class="dashboard-card contact-card">
+            <h3>Contact Me</h3>
+            <div class="contact-row">
+              <p>contact@stanmakes.games</p>
+              <div class="contact-icons">
+                <a href="https://github.com/taiix" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 1.5C6.2 1.5 1.5 6.3 1.5 12.2c0 4.7 3 8.7 7.2 10.1.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1.1 3 .8.1-.6.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.8 9.8 0 0 1 5.1 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.8 1 1.7 1 2.7 0 4-2.4 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5 4.2-1.4 7.2-5.4 7.2-10.1C22.5 6.3 17.8 1.5 12 1.5z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Stanislav. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="infoModal" aria-hidden="true">
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" id="modalCloseBtn" aria-label="Close panel">X</button>
+
+        <div id="modalBasicContent">
+          <h3 id="modalTitle">Project Info</h3>
+          <p id="modalText">Add your information here.</p>
+          <div class="modal-media" id="modalMedia"></div>
+        </div>
+
+        <div class="projects-browser" id="projectsBrowser" hidden>
+          <h3>All Projects</h3>
+          <div class="projects-browser-layout">
+            <div class="projects-browser-list" id="projectsBrowserList"></div>
+            <article class="projects-browser-detail" id="projectsBrowserDetail">
+              <h4 id="projectsDetailTitle"></h4>
+              <p id="projectsDetailText"></p>
+                  <div id="projectsDetailVideoSlot"></div>
+              <video id="projectsDetailVideo" class="projects-detail-video" controls preload="metadata" hidden></video>
+              <div class="projects-detail-gallery" id="projectsDetailGallery"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="image-lightbox" id="imageLightbox" hidden aria-hidden="true">
+      <button class="image-lightbox-close" type="button" id="imageLightboxClose" aria-label="Close image view">X</button>
+      <button class="image-lightbox-nav prev" type="button" id="imageLightboxPrev" aria-label="Previous image">&#10094;</button>
+      <div class="image-lightbox-stage" id="imageLightboxStage"></div>
+      <button class="image-lightbox-nav next" type="button" id="imageLightboxNext" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/modal-system.js"></script>
+    <script src="scripts/projects-browser-system.js"></script>
+    <script src="scripts/projects-scroll-system.js"></script>
+    <script src="scripts/app.js"></script>
+
+    
+</body>
 </html>
