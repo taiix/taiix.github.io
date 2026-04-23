@@ -44,21 +44,6 @@
   opacity: 0.95;
 }
 
-.hero-btn {
-  width: fit-content;
-  margin-top: 6px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: #0f87bf;
-  color: #000000;
-  text-decoration: none;
-  font-size: 0.84rem;
-}
-
-.hero-btn:hover {
-  background: #0b6f9d;
-}
-
 @media (max-width: 900px) {
   .content {
     grid-template-columns: 1fr;

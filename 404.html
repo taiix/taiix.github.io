@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+  <title>Page Not Found | Stan's Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: #0a1829;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.42), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.28), transparent 38%),
+        linear-gradient(130deg, #22c1c3 0%, #fdbb2d 100%);
+    }
+
+    .panel {
+      width: min(640px, 100%);
+      padding: clamp(20px, 4vw, 34px);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 34px rgba(5, 21, 40, 0.2);
+      text-align: center;
+    }
+
+    .code {
+      margin: 0;
+      font-size: clamp(2.3rem, 8vw, 4.6rem);
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 12px 0 8px;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    p {
+      margin: 0;
+      opacity: 0.86;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #051528;
+      border: 1px solid rgba(10, 24, 41, 0.28);
+      background: rgba(255, 255, 255, 0.46);
+    }
+
+    .btn.primary {
+      background: #0f87bf;
+      border-color: transparent;
+    }
+
+    .btn.primary:hover,
+    .btn.primary:focus-visible {
+      background: #0b6f9d;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel" aria-labelledby="notFoundTitle">
+    <p class="code" aria-hidden="true">404</p>
+    <h1 id="notFoundTitle">This page wandered into the fog.</h1>
+    <p>The link may be outdated, or the content moved to a new location.</p>
+    <div class="actions">
+      <a class="btn primary" href="/">Back to Portfolio</a>
+      <a class="btn" href="mailto:contact@stanmakes.games?subject=Broken%20Link%20Report">Report Broken Link</a>
+    </div>
+  </main>
+</body>
+</html>

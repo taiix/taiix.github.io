@@ -79,6 +79,25 @@
   transform: scaleX(1);
 }
 
+.top-nav-links .top-nav-hire-link {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 24, 41, 0.35);
+  background: rgba(255, 255, 255, 0.28);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-nav-links .top-nav-hire-link::after {
+  display: none;
+}
+
+.top-nav-links .top-nav-hire-link:hover,
+.top-nav-links .top-nav-hire-link:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 6px 16px rgba(2, 22, 35, 0.18);
+}
+
 .top-nav-icons {
   display: flex;
   gap: 8px;
