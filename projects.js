@@ -43,8 +43,36 @@
 window.SITE_DATA = {
 
   projects: [
+    { title: 'Reef Run', kind: 'gameplay capture', accent: '#22c1c3', year: '2026', role: 'Multiplayer & Steam Integration',
+      source: '',
+      blurb: 'An underwater social-deduction game for up to eight players: dive the reef together, but one of you is the shark.',
+      contribution: 'I built the multiplayer with Mirror — host/join lobbies, player sync and match flow — and integrated Steam through Steamworks.NET for friends, invites and lobby discovery.',
+      tags: ['Mirror', 'Steamworks.NET', 'Multiplayer', 'Unity', 'C#'],
+      gallery: [{label:'main menu',src:'assets/reefrun/reefRun1.png'},
+        {label:'lobby — up to 8 players',src:'assets/reefrun/reefRun2.png'},
+        {label:'one of you is the shark',src:'assets/reefrun/reefRun3.png'},
+        {label:'the reef floor',src:'assets/reefrun/reefRun4.png'},
+        {label:'coral shallows',src:'assets/reefrun/reefRun5.png'},
+        {label:'open water',src:'assets/reefrun/reefRun6.png'}] },
+    { title: 'BattleTank Tanktics', kind: 'gameplay capture', accent: '#ff6b6b', year: '2026', role: 'Multiplayer Programmer',
+      source: '',
+      blurb: 'A turn-based tank duel on a hidden grid — place your tank, plan your moves, and hunt your opponent online.',
+      contribution: 'I built the multiplayer with Unity Netcode for GameObjects — host/join sessions with room codes, and networked turn flow and game state so every player sees the same board.',
+      tags: ['Netcode for GameObjects', 'Multiplayer', 'Unity', 'C#'],
+      gallery: [{label:'main menu',src:'assets/tanktics/tanktics1.png'},
+        {label:'host or join a match',src:'assets/tanktics/tanktics2.png'},
+        {label:'place your tank',src:'assets/tanktics/tanktics3.png'},
+        {label:'turn-based movement',src:'assets/tanktics/tanktics4.png'}] },
+    { title: 'Perplexity', kind: 'gameplay capture', accent: '#9d7bff', year: '2025', role: 'Gameplay Programmer',
+      source: '',
+      blurb: 'A split-screen co-op escape game where the two screens are the puzzle: use the other half to gain a new perspective. Three levels take you through the stages of the Internet, each one engulfed by the digital swamp.',
+      contribution: 'I built the gameplay mechanics — the puzzle interactions and the systems that make each half of the split screen change what the other player can see and solve.',
+      tags: ['Co-op', 'Puzzle', 'Split-screen', 'Unity', 'C#'],
+      gallery: [{label:'early web level',src:'assets/perplexity/perplexity2.png'},
+        {label:'neon grid level',src:'assets/perplexity/perplexity1.png'},
+        {label:'the digital swamp',src:'assets/perplexity/perplexity3.png'}] },
     { title:
-       'Codename Thunderbird', 
+       'Codename Thunderbird',
        kind: 'product shot', 
        accent: '#22c1c3', 
        year: '2024', 
@@ -97,6 +125,11 @@ window.SITE_DATA = {
       blurb: 'A 7-level 2D platformer with puzzle elements: run, wall-jump, and sacrifice your character to summon your \u201cAngel\u201d.',
       contribution: 'A team project. I worked on the platforming feel and the \u201cAngel\u201d sacrifice mechanic that lets you reach places your mortal body can\u2019t.',
       tags: ['Unity', 'C#', '2D Platformer'], itchEmbed: 'https://itch.io/embed/2197684?dark=true',
-      gallery: [{label:'wall-jump'}, {label:'angel mechanic'}, {label:'level design'}] }
+      thumbnail: 'assets/neon%20rush/thumbnail.png',
+      gallery: [{label:'neon world',src:'assets/neon%20rush/neonRush1.png'},
+        {label:'angel mechanic',src:'assets/neon%20rush/neonRush2.png'},
+        {label:'jump the gaps',src:'assets/neon%20rush/neonRush3.png'},
+        {label:'vertical platforming',src:'assets/neon%20rush/neonRush4.png'},
+        {label:'spikes & checkpoints',src:'assets/neon%20rush/neonRush5.png'}] }
   ]
 };
