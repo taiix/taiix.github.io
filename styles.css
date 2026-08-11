@@ -266,6 +266,57 @@ a.ul:hover {
   aspect-ratio: 4 / 3;
 }
 
+/* A .shot that opens a gallery is a real <button>, so it needs the browser's
+   button styling stripped back to what the <div> version looked like. */
+button.shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.shot img {
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+button.shot:hover img {
+  opacity: 0.88;
+  transform: scale(1.015);
+}
+
+/* Count of extra frames, revealed on hover over the shot. */
+.shot-more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0.625rem;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  color: var(--ink-muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.shot-wrap {
+  position: relative;
+}
+
+.shot-wrap:hover .shot-more,
+button.shot:focus-visible + .shot-more {
+  opacity: 1;
+}
+
+/* Touch screens have no hover, so the badge stays on — otherwise there is
+   nothing telling you the image opens a gallery. */
+@media (hover: none) {
+  .shot-more {
+    opacity: 1;
+  }
+}
+
 .shot img {
   width: 100%;
   height: 100%;
@@ -419,6 +470,142 @@ footer {
   padding: 2rem 0;
   border-top: 1px solid var(--line);
   color: var(--ink-muted);
+}
+
+/* -----------------------------------------------------------------------------
+   Gallery. A native <dialog>, so Esc, focus handling and the backdrop come
+   from the browser rather than from script.
+   -------------------------------------------------------------------------- */
+.lightbox {
+  width: min(1100px, 94vw);
+  max-width: none;
+  max-height: 92vh;
+  /* Explicit, because the `* { margin: 0 }` reset above cancels the auto
+     margins a <dialog> normally relies on to centre itself. */
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox::backdrop {
+  background: rgb(0 0 0 / 0.7);
+}
+
+.lightbox-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.lightbox-title {
+  font-family: var(--font-meta);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.lightbox-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
+  background: var(--paper-sunk);
+}
+
+/* auto sizing rather than 100%: several screenshots are ~620px wide, and
+   stretching those to fill the stage just makes them soft. */
+.lightbox-stage img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 74vh;
+  object-fit: contain;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox-nav:hover {
+  color: var(--accent);
+  border-color: var(--line-strong);
+}
+
+.lightbox-prev { left: 0.75rem; }
+.lightbox-next { right: 0.75rem; }
+
+.lightbox-foot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.875rem 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+}
+
+/* Thumbnail strip: one row, scrolls sideways when a project has many frames. */
+.lightbox-strip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.lightbox-strip button {
+  flex: 0 0 auto;
+  width: 4.5rem;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper-sunk);
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox-strip button:hover {
+  opacity: 0.85;
+}
+
+.lightbox-strip button[aria-current='true'] {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.lightbox-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dialog is open: stop the page behind it from scrolling. */
+body.has-dialog {
+  overflow: hidden;
 }
 
 /* -----------------------------------------------------------------------------
